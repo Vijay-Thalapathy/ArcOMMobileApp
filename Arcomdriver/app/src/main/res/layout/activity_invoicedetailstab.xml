@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".order.ActivityOrdersDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_home"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:tint="@color/colorGray"
+                    app:srcCompat="@drawable/ic_user">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Customer"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_route"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    app:tint="@color/colorAccent"
+                    app:srcCompat="@drawable/ic_invoice">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Invoice"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_order"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:tint="@color/colorGray"
+                    app:srcCompat="@drawable/ic_cart">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Orders"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_bottom"
+            android:orientation="vertical">
+
+        <!--    <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back">
+
+&lt;!&ndash;
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/mail_ic"
+                    android:backgroundTint="@color/colorWhite"
+                    android:background="@drawable/ic_mail"
+                    android:layout_marginEnd="8dp" />
+&ndash;&gt;
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dot_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/menudots"
+                    android:backgroundTint="@color/colorWhite" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/print_img"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_print"
+                    android:backgroundTint="@color/colorWhite" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/download_ic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:background="@drawable/ic_download_" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/InId_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:text="SO N/A"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+            </androidx.appcompat.widget.Toolbar>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Trinity Customer"
+                    android:id="@+id/InCustomerName_tv"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="N/A"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_et_whitebtbg"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="13sp"
+                        android:id="@+id/InStatus_tv"
+                        android:visibility="visible"
+                        android:textColor="@color/colorAccent"
+                        android:gravity="center"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:text="Add Payment"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/shape_btngreen_bg"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="13sp"
+                        android:id="@+id/Inpayment_tv"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorWhite"
+                        android:gravity="center"/>
+
+
+                </RelativeLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Invoice Date"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05/01/2023"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:id="@+id/InDate_tv"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Due Date"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05/01/2023"
+                            android:id="@+id/IndueDate_tv"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Amount"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="05/01/2023"
+                            android:id="@+id/InAmt_tv"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/AppTheme.TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabGravity="fill"
+                app:tabMode="scrollable">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOTES" />
+            <!--    <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRACK ORDER" />-->
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUMMARY" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAYMENTS" />
+               <!-- <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ASSOCIATE ORDERS" />-->
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

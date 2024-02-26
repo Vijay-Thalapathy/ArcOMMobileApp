@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_close"
+                android:backgroundTint="@color/colorWhite" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Add Filter"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="Order Date"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="5dp"
+                                app:srcCompat="@drawable/ic_calendar"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/shape_et_bg">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_from_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="center"
+                                    android:text="DD/MM/YYYY"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:text="to"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                app:srcCompat="@drawable/ic_calendar"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/shape_et_bg">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_to_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:text="DD/MM/YYYY"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textStyle="normal"
+                                    android:focusable="true"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <!--   <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/od_er_ll"
+                        android:background="@drawable/shape_et_bg">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_rd_orderDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="MM/DD/YYYY"
+                            android:textSize="14sp"
+                            android:textColorHint="@color/colorBlackLight"
+                            android:textColor="@color/colorBlackLight"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="textStart"
+                            android:textStyle="normal"
+                            android:focusable="true"/>
+                    </LinearLayout>-->
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:text="Delivery Date"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="5dp"
+                                app:srcCompat="@drawable/ic_calendar"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/shape_et_bg">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_Dfrom_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:focusable="true"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="center"
+                                    android:text="DD/MM/YYYY"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="1">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:text="to"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                app:srcCompat="@drawable/ic_calendar"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/shape_et_bg">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_Dto_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:text="DD/MM/YYYY"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:gravity="center"
+                                    android:textAlignment="center"
+                                    android:textStyle="normal"
+                                    android:focusable="true"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <!--   <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/od_er_ll"
+                        android:background="@drawable/shape_et_bg">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_rd_orderDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="MM/DD/YYYY"
+                            android:textSize="14sp"
+                            android:textColorHint="@color/colorBlackLight"
+                            android:textColor="@color/colorBlackLight"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:gravity="start|center_vertical"
+                            android:textAlignment="textStart"
+                            android:textStyle="normal"
+                            android:focusable="true"/>
+                    </LinearLayout>-->
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs_er_ll"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:paddingStart="15dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fulfillment Type"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDFulfillmentType"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Status"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDOrderStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sales Rep"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_DsalesRep"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Rep"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_DeliveryRep"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/ll_bottom"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorWhite"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        style="@style/RoundCornerButtonGreen"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:text="Close"
+                        android:id="@+id/fl_btn_clear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        style="@style/RoundCornerButton"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:text="Search"
+                        android:id="@+id/fl_btn_search"
+                        android:layout_marginStart="15dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

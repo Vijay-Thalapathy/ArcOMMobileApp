@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/btn_show"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorWhite"
+                android:weightSum="2">
+
+<!--
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Cancel"
+                    style="@style/RoundCornerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="Cancel"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Intiate"
+                    style="@style/RoundCornerButtonGreen"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="Initiate"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:orientation="vertical">
+
+<!--
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back"
+                android:id="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Cash"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+            </androidx.appcompat.widget.Toolbar>
+-->
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ns"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:paddingTop="8dp"
+                    android:layout_marginTop="6dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:weightSum="4"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_bluenewcircle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_invoice"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truck \nInspection"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:backgroundTint="@color/colorAccent"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_bluenewcircle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_refresh_svgrepo_com"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Planned \nRoute"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:backgroundTint="@color/colorAccent"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_bluenewcircle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_truck"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truck \nLoading"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:backgroundTint="@color/colorAccent"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_bluenewcircle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_payment"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Customer Cash"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <!--<RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/progress_bar_background"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:padding="5dp"
+                            android:progress="100"
+                            android:progressDrawable="@drawable/curved_progress_bar" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11sp"
+                            android:layout_marginStart="14dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="100%"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent" />
+
+                    </RelativeLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:background="@drawable/shape_et_bg"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Refund To Customer Cash"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Cash that needs to be returned to customer"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="12sp"
+                                android:textColor="@color/colorGrayDark" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="4dp"
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_et_bg">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+                                        android:layout_width="match_parent"
+                                        android:textColorHint="@color/ColorHint"
+                                        android:layout_height="50dp"
+                                        app:hintEnabled="false"
+                                        app:boxBackgroundMode="none"
+                                        app:boxStrokeColor="@android:color/transparent">
+                                        <androidx.appcompat.widget.AppCompatEditText
+                                            android:id="@+id/et_CusAmt"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:textSize="12sp"
+                                            android:textColor="@color/colorBlackLight"
+                                            android:hint="0.00"
+                                            android:text="0"
+                                            android:inputType="numberDecimal"
+                                            android:maxLines="1"
+                                            android:paddingStart="16dp"
+                                            android:paddingEnd="16dp"
+                                            android:textColorHint="@color/ColorHint"
+                                            android:fontFamily="@font/sf_pro_display_regular"
+                                            android:longClickable="false"
+                                            android:singleLine="true"
+                                            android:maxLength="7"
+                                            android:background="@drawable/shape_et_bg"
+                                            android:imeOptions="actionNext"/>
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/shape_et_bg">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/sp_cash1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:background="@drawable/shape_et_bg"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Miscellaneous Fund"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tol gates, Padding Feeds,Fuel etc"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorGrayDark" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="4dp"
+                                    android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/shape_et_bg">
+
+                                        <com.google.android.material.textfield.TextInputLayout
+                                            android:layout_width="match_parent"
+                                            android:textColorHint="@color/ColorHint"
+                                            android:layout_height="50dp"
+                                            app:hintEnabled="false"
+                                            app:boxBackgroundMode="none"
+                                            app:boxStrokeColor="@android:color/transparent">
+                                            <androidx.appcompat.widget.AppCompatEditText
+                                                android:id="@+id/et_MisAmt"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="50dp"
+                                                android:textSize="12sp"
+                                                android:textColor="@color/colorBlackLight"
+                                                android:hint="0.00"
+                                                android:text="0"
+                                                android:inputType="numberDecimal"
+                                                android:maxLines="1"
+                                                android:paddingStart="16dp"
+                                                android:paddingEnd="16dp"
+                                                android:textColorHint="@color/ColorHint"
+                                                android:fontFamily="@font/sf_pro_display_regular"
+                                                android:longClickable="false"
+                                                android:singleLine="true"
+                                                android:maxLength="7"
+                                                android:background="@drawable/shape_et_bg"
+                                                android:imeOptions="actionNext"/>
+                                        </com.google.android.material.textfield.TextInputLayout>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="vertical">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:background="@drawable/shape_et_bg">
+
+                                        <androidx.appcompat.widget.AppCompatSpinner
+                                            android:id="@+id/sp_cash2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Draw Signature *"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/sf_pro_display_bold" />
+
+
+                        <com.github.gcacace.signaturepad.views.SignaturePad
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/shape_et_bg"
+                            app:penColor="@android:color/black"
+                            android:id="@+id/signature_pad" />
+
+
+                        <LinearLayout
+                            android:id="@+id/buttons_container"
+                            android:paddingTop="16dp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_alignParentBottom="true">
+
+                            <Button
+                                android:id="@+id/clear_button"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/clear_pad"
+                                android:enabled="false" />
+
+                            <Button
+                                android:id="@+id/save_button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:text="@string/save_signature" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

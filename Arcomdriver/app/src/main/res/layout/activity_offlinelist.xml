@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <!--    <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back"
+                android:id="@+id/toolbar">
+
+&lt;!&ndash;
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:id="@+id/createOrder_img"
+                    android:backgroundTint="@color/colorWhite"
+                    android:background="@drawable/plus_round"
+                    android:layout_marginEnd="25dp" />
+&ndash;&gt;
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Offline Sync"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+            </androidx.appcompat.widget.Toolbar>-->
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                       <!-- <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="16dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_order"
+                                android:layout_width="100dp"
+                                android:layout_height="28dp"
+                                android:text="Transaction"
+                                android:background="@drawable/shape_btn1"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textAllCaps="false"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_recurring_order"
+                                android:layout_width="100dp"
+                                android:layout_height="28dp"
+                                android:text="Master"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textAllCaps="false"
+                                android:background="@drawable/shape_btn4"/>
+
+
+
+
+                        </LinearLayout>-->
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/syncBtn"
+                            android:layout_width="140dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="1"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/shape_btngreen_bg"
+                            android:drawableStart="@drawable/ic_refresh_svgrepo_com"
+                            android:drawableTint="@color/colorWhite"
+                            android:gravity="start|center_vertical"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="34dp"
+                            android:paddingBottom="3dp"
+                            android:text="Sync"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                       <!-- <RelativeLayout
+                            android:layout_width="140dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/syncBtn"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="16dp"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:background="@drawable/shape_btngreen_bg">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/Offline_img"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:padding="5dp"
+                                android:focusable="false"
+                                android:clickable="false"
+                                android:focusableInTouchMode="false"
+                                android:tint="@color/colorWhite"
+                                app:srcCompat="@drawable/ic_refresh_svgrepo_com"
+                                tools:ignore="ContentDescription" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:id="@+id/Syn_tv"
+                                android:focusable="false"
+                                android:clickable="false"
+                                android:focusableInTouchMode="false"
+                                android:layout_toRightOf="@+id/Offline_img"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:text=" Sync"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>-->
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/OfStatus_sp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_search_bg_trans"
+                            android:layout_height="45dp"
+                            android:paddingLeft="30dp" />
+
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/search_OfflineListview"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/shape_search_bg"
+                            android:textColor="@color/colorBlackLight"
+                            android:theme="@style/search_style"
+                            app:closeIcon="@android:drawable/ic_menu_close_clear_cancel"
+                            app:iconifiedByDefault="false"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            app:queryBackground="@android:color/transparent"
+                            app:layout_scrollFlags="scroll|enterAlways"
+                            app:queryHint="Search"
+                            app:searchIcon="@drawable/ic_search" />
+
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#ECECEC"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chkAllOSelected"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:theme="@style/check_style" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@+id/chkAllOSelected">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="vertical">
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Draft Order#"
+                                        android:id="@+id/text_m"
+                                        android:layout_marginStart="20dp"
+                                        android:fontFamily="@font/sf_pro_display_bold"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="vertical">
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Order#"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/sf_pro_display_bold"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="vertical">
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text=""
+                                        android:layout_marginStart="20dp"
+                                        android:fontFamily="@font/sf_pro_display_bold"
+                                        android:textSize="13sp"
+                                        android:textColor="@color/colorBlack" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rc_OfflineList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:visibility="visible" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:id="@+id/txt_no_record"
+                            android:layout_centerInParent="true"
+                            app:lottie_rawRes="@raw/error_animation"
+                            android:visibility="visible"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"/>
+
+
+                      <!--  <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_no_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No records were found.."
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_regular"/>-->
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

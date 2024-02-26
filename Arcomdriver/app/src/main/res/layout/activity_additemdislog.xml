@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back"
+                android:id="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Add Items To Sales Order"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Image"
+                        android:textColor="@color/colorAccent"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp" />
+
+
+                    <ImageView
+                        android:id="@+id/pro_image_view"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_outline_rect"
+                        android:scaleType="centerCrop" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Product"
+                        android:textColor="@color/colorAccent"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Quantity"
+                                android:textColor="@color/colorAccent"
+                                android:padding="5dp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_et_bg">
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_qty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:hint="0.0"
+                                    android:text="1"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorBlack"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:gravity="center"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:maxLines="1"
+                                    android:imeOptions="actionDone"
+                                    android:background="@android:color/transparent"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:gravity="start"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Package"
+                                android:textColor="@color/colorAccent"
+                                android:padding="5dp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_et_bg">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_package"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Each"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorGrayDark"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:gravity="center"
+                                    android:background="@android:color/transparent"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Price/Unit"
+                                android:textColor="@color/colorAccent"
+                                android:padding="5dp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="14sp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_et_bg">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tv_pricePerUnit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="0.00"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorGrayDark"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:gravity="center"
+                                    android:background="@android:color/transparent"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:gravity="start"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Amount"
+                                android:textColor="@color/colorAccent"
+                                android:padding="5dp"
+                                android:fontFamily="@font/sf_pro_display_bold"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/shape_et_bg">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/et_amt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="center"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:text="0.0"
+                                    android:textColor="@color/colorGrayDark"
+                                    android:textSize="15sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/colorWhite"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_clear"
+                            style="@style/RoundCornerButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Cancel"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_save"
+                            style="@style/RoundCornerButtonGreen"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Save"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:background="@color/colorWhite"
+             android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:weightSum="2">
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/btn_saveNew"
+                 style="@style/ButtonWhite"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/sf_pro_display_regular"
+                 android:text="Save and New"
+                 android:layout_marginTop="15dp"
+                 android:layout_weight="1"
+                 android:textAllCaps="false"
+                 android:textColor="@color/colorBlackLight"
+                 android:textSize="15sp" />
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/btn_save"
+                 style="@style/ButtonGreen"
+                 android:layout_marginTop="15dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:fontFamily="@font/sf_pro_display_regular"
+                 android:text="Save"
+                 android:layout_weight="1"
+                 android:textAllCaps="false"
+                 android:textColor="@color/colorWhite"
+                 android:textSize="15sp" />
+
+
+         </LinearLayout>-->
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

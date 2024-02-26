@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:maxSdkVersion="33" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/Theme.Arcomdriver"
+        android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="tiramisu">
+        <activity
+            android:name=".driver.Activity_Splash"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Arcomdriver.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.here.sdk.access_key_id" android:value="H9rGqYynKQ03nAPsZsZz1w" />
+        <meta-data android:name="com.here.sdk.access_key_secret" android:value="qtW3VLqUQVvIh9P9gc3inzja_GNIV0NWyFTJC87u8yWP-XRo6UUOTXQIcbBv1VSE3seW6lS2tgpAn8xTxwpgWw" />
+
+        <!--<provider
+              &lt;!&ndash;android:name="androidx.core.content.FileProvider"
+              android:authorities="com.example.barcodescanner.fileprovider"
+              android:exported="false"
+              android:grantUriPermissions="true">&ndash;&gt;
+
+          </provider>-->
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+        <activity
+            android:name=".driver.ActivitySignIn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".order.Activity_OrdersHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".order.Activity_CreateOrder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".printer.ThermalPrint"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".printer.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_RouteHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_RoutePlanning"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_RouteLoading"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".reports.ActivityReportHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_Route360"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_RouteSOD"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".payments.ActivityShareInvoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".reports.Activity_DeliveryItemReportsDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".reports.Activity_SalesReportsDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.Activity_RoutePayment"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".order.ActivityOrdersDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".order.Activity_UpdateOrder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".payments.Activity_Deliver"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".payments.Activity_InDirectPayments"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".payments.Activity_OrderDelivery"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".payments.Activity_CollectPayments"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".payments.Activity_ProofDelivery"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".helper.PdfViewerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+        <activity
+            android:name=".helper.ShareInvoicePdfViewer"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
+
+        <activity
+            android:name=".invoice.Activity_InvoiceHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".invoice.Activity_CreateInvoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".invoice.ActivityInvoiceDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".customer.Activity_CustomerHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".order.Activity_OfflineSync"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".customer.ActivityCustomerDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".customer.ActivityCustomerPricing"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".customer.Activity_CreateCustomer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".customer.ActivityCustomerPricingInfo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".customer.Activity_UpdateCustomer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".route.deliverorders.Activity_DeliverOrders"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".products.Activity_ProductHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".products.Activity_CreateProduct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".products.ActivityProductDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".products.Activity_UpdateProduct"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".salesreturn.ActivitySalesHistory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".salesreturn.ActivitySalesShareInvoice"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".salesreturn.ActivitySalesDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+        <activity
+            android:name=".salesreturn.Activity_CreateSalesReturn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            android:configChanges="uiMode" />
+
+        <activity
+            android:name=".common.BarcodeScan"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:stateNotNeeded="true"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

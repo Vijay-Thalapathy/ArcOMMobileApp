@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/ll_view"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardUseCompatPadding="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:id="@+id/view_Pending"
+            android:paddingStart="5dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/lo_proName_tv"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorAccent"
+                        android:fontFamily="@font/sf_pro_display_bold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <!--    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/addWareHouse_rl"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/ic_refresh_svgrepo_com" />
+
+
+                    </RelativeLayout>-->
+                <!--    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/addOrderEye_rll"
+                        android:layout_marginStart="8dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/eye_ic" />
+
+
+                    </RelativeLayout>-->
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/img_productImgStatus"
+                        android:layout_centerInParent="true"
+                        android:clickable="false"
+                        app:srcCompat="@drawable/loading_ic_p"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp" />
+
+                    <!--     <RelativeLayout
+                             android:layout_width="30dp"
+                             android:layout_height="25dp"
+                             android:id="@+id/addWarehseBox_rlll"
+                             android:layout_marginStart="8dp"
+                             android:focusable="true"
+                             android:clickable="true"
+                             android:focusableInTouchMode="true"
+                             android:background="@drawable/shape_et_bg">
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:layout_width="25dp"
+                                 android:layout_height="25dp"
+                                 android:layout_centerInParent="true"
+                                 android:clickable="false"
+                                 android:focusable="false"
+                                 android:focusableInTouchMode="false"
+                                 android:paddingStart="5dp"
+                                 android:paddingEnd="5dp"
+                                 app:srcCompat="@drawable/ic_download" />
+
+
+                         </RelativeLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Required: 0"
+                        android:textSize="12sp"
+                        android:id="@+id/lo_proReq_tv"
+                        android:textColor="@color/colorBlackLight"
+                        android:fontFamily="@font/sf_pro_display_regular"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lo_proTruck_tv"
+                        android:text="On Truck : 0"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlackLight"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Amount : 0 "
+                        android:textSize="12sp"
+                        android:id="@+id/lo_proAmt_tv"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorBlackLight"
+                        android:fontFamily="@font/sf_pro_display_regular"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Warehouses  : 0"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:id="@+id/lo_proWarehse_tv"
+                        android:textColor="@color/colorBlackLight"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        tools:ignore="RelativeOverlap" />
+                </LinearLayout>
+            </LinearLayout>
+          <!--  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorBlackLight"
+                        android:fontFamily="@font/sf_pro_display_regular"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_trip"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:text="Load Truck"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textAllCaps="false"
+                        style="@style/RoundCornerButton"/>
+                </LinearLayout>
+            </LinearLayout>-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

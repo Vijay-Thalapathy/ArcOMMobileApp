@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">-->//DarkAction
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">//LightAction
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme1.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.TransparentStatusBar" parent="AppTheme1" />
+
+
+    <!-- Button_Shape -->
+    <style name="RoundCornerButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/shape_btn_bg</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+
+    <!-- Button_Shape -->
+    <style name="ButtonWhite" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/shape_et_whitebg</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <!-- Button_Shape -->
+    <style name="ButtonGreen" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/shape_et_greenbg</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <!-- Button_ShapeGreen -->
+    <style name="RoundCornerButtonGreen" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/shape_btngreen_bg</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <!-- Menu -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+    <!-- CircularProgress -->
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.TabLayout" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabTextColor">@color/colorBlack</item>
+    </style>
+
+    <style name="search_style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="LoadingStyle" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+    </style>
+
+    <style name="check_style" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item> <!-- for check state -->
+        <item name="android:textColorSecondary">@color/colorAccent</item> <!-- for uncheck state -->
+    </style>
+
+    <style name="AnimateDialog_In" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowEnterAnimation">@anim/anim_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_bottom</item>
+    </style>
+</resources>

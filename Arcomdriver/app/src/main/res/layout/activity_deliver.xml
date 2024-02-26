@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_home"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:tint="@color/colorAccent"
+                    app:srcCompat="@drawable/ic_user">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Customer"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_route"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    app:tint="@color/colorGray"
+                    app:srcCompat="@drawable/ic_invoice">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Invoice"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:id="@+id/ll_order"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:tint="@color/colorAccent"
+                    app:srcCompat="@drawable/ic_cart">
+                </androidx.appcompat.widget.AppCompatImageView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:fontFamily="@font/sf_pro_display_bold"
+                    android:text="Orders"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_bottom"
+            android:orientation="vertical">
+        <!--    <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back"
+                android:id="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Add Payment"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+            </androidx.appcompat.widget.Toolbar>-->
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ns"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Payment Date"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:id="@+id/od_er_ll"
+                            android:background="@drawable/shape_et_bg">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/et_paymentDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="MM/DD/YYYY"
+                                android:textSize="14sp"
+                                android:textColorHint="@color/colorBlackLight"
+                                android:textColor="@color/colorBlackLight"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:gravity="start|center_vertical"
+                                android:textAlignment="textStart"
+                                android:textStyle="normal"
+                                android:focusable="true"/>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="18dp"
+                            app:srcCompat="@drawable/ic_calendar"
+                            android:id="@+id/country_ic"
+                            android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Payment Type"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:id="@+id/radioGroup_PayMethod">
+
+                        <RadioButton
+                            android:id="@+id/radioFull"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Full"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/colorBlackLight"
+                            android:layout_marginStart="15dp"
+                            android:checked="true"
+                            android:buttonTint="@color/colorAccent"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioPartial"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Partial"
+                            android:textStyle="bold"
+                            android:buttonTint="@color/colorAccent"
+                            android:textColor="@color/colorBlackLight"
+                            android:checked="false"
+                            android:textSize="14sp" />
+
+
+
+                    </RadioGroup>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Payment method"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:id="@+id/radioGroupPayMethod">
+
+                        <RadioButton
+                            android:id="@+id/radioCash"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cash"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textColor="@color/colorBlackLight"
+                            android:layout_marginStart="15dp"
+                            android:checked="true"
+                            android:buttonTint="@color/colorAccent"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioCheque"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Check"
+                            android:textStyle="bold"
+                            android:buttonTint="@color/colorAccent"
+                            android:textColor="@color/colorBlackLight"
+                            android:checked="false"
+                            android:textSize="14sp" />
+
+<!--
+                        <RadioButton
+                            android:id="@+id/radioCredit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Credit Card"
+                            android:textStyle="bold"
+                            android:buttonTint="@color/colorAccent"
+                            android:textColor="@color/colorBlackLight"
+                            android:checked="false"
+                            android:textSize="14sp" />
+-->
+
+
+                    </RadioGroup>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Payment details"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="16sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Amount Payable"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="50dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_payableAmt"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Payable Amount "
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:focusable="false"
+                            android:enabled="false"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                   <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Amount Paid *"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="50dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_ReceivedAmt"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Received Amount "
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Due Amount"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="50dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_dueAmt"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:textSize="14sp"
+                            android:text="0"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Due Amount "
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:focusable="false"
+                            android:enabled="false"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Reference"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="50dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_reference"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Reference "
+                            android:inputType="textCapSentences|text"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                   <!-- <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Payment memo"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_payMemo"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_et_bg"
+                        android:gravity="start"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:hint="Enter the Memo"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLength="200"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColorHint="@color/ColorHint"
+                        android:textColor="@color/colorBlackLight"
+                        android:textSize="13sp" />-->
+
+                    <!-- <RelativeLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="50dp"
+                         android:id="@+id/select_Img"
+                         android:background="@drawable/shape_et_bg">
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/txt_ImgName"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_centerVertical="true"
+                             android:fontFamily="@font/sf_pro_display_regular"
+                             android:paddingStart="20dp"
+                             android:text="Browse Files"
+                             android:textColor="@color/ColorHint"
+                             android:textSize="13sp" />
+
+                         <androidx.appcompat.widget.AppCompatImageView
+                             android:layout_width="20dp"
+                             android:layout_height="20dp"
+                             android:layout_alignParentEnd="true"
+                             android:layout_centerVertical="true"
+                             android:layout_marginEnd="15dp"
+                             app:srcCompat="@drawable/ic_upload_kyc">
+
+                         </androidx.appcompat.widget.AppCompatImageView>
+
+                     </RelativeLayout>-->
+
+                    <!--   <androidx.appcompat.widget.AppCompatTextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="11sp"
+                           android:id="@+id/cheque_note_tv"
+                           android:fontFamily="@font/sf_pro_display_regular"
+                           android:text="Note: Upload the original copy of proof"
+                           android:gravity="center"
+                           android:textColor="@color/colorGray" />-->
+
+<!--
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginBottom="15dp"
+                        style="@style/RoundCornerButton"/>
+-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/colorWhite"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:weightSum="2">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_Cancel"
+                            style="@style/RoundCornerButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Cancel"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_proceedNxt"
+                            style="@style/RoundCornerButtonGreen"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="Proceed to Next"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

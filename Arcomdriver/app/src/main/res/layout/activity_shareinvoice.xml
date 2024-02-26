@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:navigationIcon="@drawable/ic_back"
+            android:id="@+id/toolbar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Share Invoice"
+                android:id="@+id/tittle_tv_head"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textColor="@color/colorWhite" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Basic Info"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Primary Email *"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorAccent" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/st_pEmail_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter Primary Email "
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="CC"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:gravity="start"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorAccent" />
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/st_CcEmail_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter CC Email "
+                            android:inputType="textNoSuggestions"
+                            android:importantForAutofill="no"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Subject *"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/sf_pro_display_bold" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/st_Subject_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_et_bg"
+                            android:gravity="start"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:hint="Enter the Subject"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="200"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="13sp" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Content *"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/sf_pro_display_bold" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/st_Content_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="340dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/shape_et_bg"
+                            android:gravity="start"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:hint="Enter the Content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="500"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="13sp" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:id="@+id/sale_tv_pr"
+                            android:text="Invoice Preview"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+                        <com.github.barteksc.pdfviewer.PDFView
+                            android:id="@+id/pdfView"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:id="@+id/btn_show"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/colorWhite"
+                            android:weightSum="2">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_cancel_"
+                                style="@style/RoundCornerButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Cancel"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_send_"
+                                style="@style/RoundCornerButtonGreen"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Send"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

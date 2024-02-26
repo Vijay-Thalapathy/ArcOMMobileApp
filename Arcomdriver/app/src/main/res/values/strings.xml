@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Arcom \ndriver</string>
+    <string name="map_api_key"></string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Report Headers -->
+    <string name="rptCurrentDeviceAndType">Current device and type</string>
+    <string name="rptRecordBufferToFileForDiagnostics">Record buffer to file for diagnostics</string>
+    <string name="rptSelectDeviveToUse">Select Device to Use</string>
+
+    <string name="ConnectingtoPrinter">Connecting to Printer...</string>
+    <string name="LoadingReport">Loading Report</string>
+
+    <string name="bluetooth_devices">Bluetooth Devices</string>
+    <string name="connect">Connect</string>
+    <string name="print">Print</string>
+
+    <string name="agreement">I agree the terms and conditions.</string>
+    <string name="clear_pad">Clear Pad</string>
+    <string name="save_signature">Save Signature</string>
+</resources>

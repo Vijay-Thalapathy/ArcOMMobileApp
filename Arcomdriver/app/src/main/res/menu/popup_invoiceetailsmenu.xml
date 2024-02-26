@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/OrderDeliver"
+        android:title="Deliver" />
+
+ <!--   <item
+        android:id="@+id/cancel_orderDetails"
+        android:title="Cancel Order" />
+
+    <item
+        android:id="@+id/Add_note"
+        android:title="Add Note" />-->
+
+<!--    <item
+        android:id="@+id/download_pdf"
+        android:title="Download PDF" />
+
+    <item
+        android:id="@+id/share_pdf"
+        android:title="Share Invoice" />-->
+<!--
+    <item
+        android:id="@+id/new_pdf"
+        android:title="Download" />-->
+
+</menu>
+

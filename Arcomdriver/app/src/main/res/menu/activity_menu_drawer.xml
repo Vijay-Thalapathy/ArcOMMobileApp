@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+    <group android:checkableBehavior="single">
+       <!-- <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_"
+            android:title="Home" />-->
+        <item
+            android:id="@+id/nav_presaleOrder"
+            android:icon="@drawable/ic_cart"
+            android:title="Presales Order" />
+
+        <item
+            android:id="@+id/nav_Routes"
+            android:icon="@drawable/ic_location"
+            android:title="Route" />
+
+        <item
+            android:id="@+id/nav_Invoice"
+            android:icon="@drawable/ic_invoice"
+            android:title="Invoice" />
+
+        <item
+            android:id="@+id/nav_sales"
+            android:icon="@drawable/ic_shopping_car"
+            android:title="Sales Return" />
+        <item
+            android:id="@+id/nav_Product"
+            android:icon="@drawable/ic_add_layer"
+            android:title="Products" />
+        <item
+            android:id="@+id/nav_Timesheet"
+            android:icon="@drawable/ic_user"
+            android:title="Customer" />
+
+        <item
+            android:id="@+id/nav_CustomerPricing"
+            android:icon="@android:drawable/ic_menu_sort_by_size"
+            android:title="Customer Pricing" />
+
+
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/baseline_bar_chart"
+            android:title="Reports" />
+
+        <item
+            android:id="@+id/nav_Offline"
+            android:icon="@drawable/ic_refresh_svgrepo_com"
+            android:title="Offline Sync" />
+        <item
+            android:id="@+id/nav_Printeer"
+            android:icon="@drawable/ic_print"
+            android:title="Printer Settings" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Log Out" />
+
+
+    </group>
+
+
+</menu>

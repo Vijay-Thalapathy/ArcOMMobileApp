@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_close"
+                android:backgroundTint="@color/colorWhite" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Add Filter"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order #"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spOrderNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Customer"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs_er_ll"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:paddingStart="15dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Products"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spRProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sales Rep"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_DsalesRep"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Rep"
+                    android:textColor="@color/colorAccent"
+                    android:padding="5dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="14sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_et_bg">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_DeliveryRep"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/ll_bottom"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorWhite"
+                    android:weightSum="2">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        style="@style/RoundCornerButtonGreen"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:text="Close"
+                        android:id="@+id/fl_btn_clear"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        style="@style/RoundCornerButton"
+                        android:layout_width="130dp"
+                        android:layout_height="35dp"
+                        android:text="Search"
+                        android:id="@+id/fl_btn_search"
+                        android:layout_marginStart="15dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_img"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_close"
+                android:backgroundTint="@color/colorWhite" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Load Truck"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/ColorHint">
+        </androidx.viewpager.widget.ViewPager>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:id="@+id/pd_name_tv"
+                            android:textStyle="bold"
+                            android:text=""
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_qty"
+                                android:layout_width="60dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="0"
+                                android:layout_gravity="center"
+                                android:textSize="14sp"
+                                android:background="@drawable/shape_et_bg"
+                                android:textColorHint="@color/colorBlackLight"
+                                android:textColor="@color/colorBlackLight"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:gravity="center"
+                                android:textAlignment="center"
+                                android:textStyle="normal"
+                                android:focusable="true"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                 <!--   <LinearLayout
+                        android:id="@+id/cart_product_quantity_buttons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:background="@drawable/layout_background_rounded_corners"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="20dp"
+                            android:layout_height="35dp"
+                            android:text="-"
+                            android:id="@+id/MtProduct_minus"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:enabled="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorGrayDark" />
+
+                        <EditText
+                            android:id="@+id/MtQty_et"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorAccent"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:focusable="false"
+                            android:enabled="false"
+                            android:selectAllOnFocus="false"
+                            android:text="0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="20dp"
+                            android:layout_height="35dp"
+                            android:text="+"
+                            android:id="@+id/MtProduct_plus"
+                            android:gravity="center"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:enabled="true"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorGrayDark" />
+
+                        &lt;!&ndash;       <androidx.appcompat.widget.AppCompatImageView
+                                   android:id="@+id/MtProduct_plus"
+                                   android:layout_width="30dp"
+                                   android:layout_height="30dp"
+                                   android:layout_weight="1"
+                                   android:background="@drawable/ic_add_24" />&ndash;&gt;
+
+                    </LinearLayout>-->
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:padding="5dp"
+                    android:text="Choose warehouse / Truck from which you want to load item to your truck"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Requested quantity : 0"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textSize="12sp"
+                        android:id="@+id/req_tv"
+                        android:textColor="@color/black" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/req2_tv"
+                        android:layout_below="@+id/req_tv"
+                        android:text="Loaded quantity : 0"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:textSize="12sp"
+                        android:textColor="@color/black" />
+
+                 <!--   <RelativeLayout
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/addWarehse_rll"
+                        android:layout_alignParentEnd="true"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/plus" />
+
+                    </RelativeLayout>-->
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:padding="5dp"
+                    android:id="@+id/warehouse_tv"
+                    android:text="Warehouse Location"
+                    android:textColor="@color/colorBlackLight"
+                    android:textSize="12sp" />
+
+          <!--      <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_WarehouseLocItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_no_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No records were found.."
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/sf_pro_display_regular"/>
+
+
+                </RelativeLayout>-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_LoadMulti"
+                    style="@style/RoundCornerButtonGreen"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Load Truck"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/sf_pro_display_bold" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

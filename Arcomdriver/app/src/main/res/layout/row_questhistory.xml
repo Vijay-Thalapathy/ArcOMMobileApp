@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="horizontal"
+android:id="@+id/ll_view"
+android:layout_margin="8dp"
+app:cardCornerRadius="8dp"
+app:cardBackgroundColor="@color/colorWhite"
+app:cardUseCompatPadding="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:id="@+id/SingleRadio_ll"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SingleRadioQuest_tv"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/sf_pro_display_bold"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup_">
+
+            <RadioButton
+                android:id="@+id/radioYes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:textStyle="bold"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:textColor="@color/colorBlackLight"
+                android:layout_marginStart="15dp"
+                android:checked="true"
+                android:buttonTint="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/radioNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="No"
+                android:textStyle="bold"
+                android:buttonTint="@color/colorAccent"
+                android:textColor="@color/colorBlackLight"
+                android:checked="false"
+                android:textSize="14sp" />
+
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:id="@+id/Description_ll"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DescQuest_tv"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/sf_pro_display_bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:textColorHint="@color/ColorHint"
+            android:layout_height="80dp"
+            app:hintEnabled="false"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@android:color/transparent">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_decribtion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlackLight"
+                android:hint=""
+                android:inputType="textCapSentences|text"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@color/ColorHint"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:longClickable="false"
+                android:singleLine="true"
+                android:maxLength="30"
+                android:background="@drawable/shape_et_bg"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

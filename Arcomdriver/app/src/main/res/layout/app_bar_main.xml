@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/menu_parent"
+    tools:context=".driver.Activity_Menu">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:id="@+id/createOrder_img"
+                android:visibility="gone"
+                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/plus_round"
+                android:layout_marginEnd="25dp" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/activity_title"
+                android:textSize="18sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Od_menu_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:background="@drawable/menudots"
+                android:backgroundTint="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/Od_edit_ic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/In_print_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_print"
+                android:backgroundTint="@color/colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/In_download_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/ic_download_" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_activity__menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:navigationIcon="@drawable/ic_back">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="Order Invoice"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+
+        <!--  <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/dot_ic"
+              android:layout_width="24dp"
+              android:layout_height="24dp"
+              android:layout_gravity="end"
+              android:layout_marginEnd="16dp"
+              android:background="@drawable/menudots"
+              android:backgroundTint="@color/colorWhite" />-->
+        <!--
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:id="@+id/mail_ic"
+            android:backgroundTint="@color/colorWhite"
+            android:background="@drawable/ic_mail"
+            android:layout_marginEnd="8dp" />
+-->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Insubmit"
+            style="@style/RoundCornerButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="Generate Order Invoice"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

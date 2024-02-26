@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:navigationIcon="@drawable/ic_back"
+            android:id="@+id/toolbar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Add Stops"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textColor="@color/colorWhite" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar"
+            android:layout_margin="16dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Stop Name*"
+                android:padding="5dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="14sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColorHint="@color/ColorHint"
+                android:layout_height="50dp"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="@android:color/transparent">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_stopsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlackLight"
+                    android:hint="Enter the Stop Name "
+                    android:inputType="textCapSentences|text"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColorHint="@color/ColorHint"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:longClickable="false"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:background="@drawable/shape_et_bg"
+                    android:imeOptions="actionNext"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Address line *"
+                android:padding="5dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="14sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColorHint="@color/ColorHint"
+                android:layout_height="50dp"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="@android:color/transparent">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_addressLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlackLight"
+                    android:hint="Enter the Address "
+                    android:inputType="textCapSentences|text"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColorHint="@color/ColorHint"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:longClickable="false"
+                    android:singleLine="true"
+                    android:maxLength="500"
+                    android:background="@drawable/shape_et_bg"
+                    android:imeOptions="actionNext"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorHint"
+                    android:text="Verify Address"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    android:id="@+id/verify_btn_clk"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="12sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorRed"
+                    android:text="Not Verified"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/verifyView_tv"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textSize="12sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <!--   <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorAccent"
+                   android:text="Address line 2 *"
+                   android:padding="5dp"
+                   android:fontFamily="@font/sf_pro_display_bold"
+                   android:textSize="14sp"
+                   android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:textColorHint="@color/ColorHint"
+                   android:layout_height="50dp"
+                   app:hintEnabled="false"
+                   app:boxBackgroundMode="none"
+                   app:boxStrokeColor="@android:color/transparent">
+                   <androidx.appcompat.widget.AppCompatEditText
+                       android:id="@+id/et_addressLine2"
+                       android:layout_width="match_parent"
+                       android:layout_height="50dp"
+                       android:textSize="14sp"
+                       android:textColor="@color/colorBlackLight"
+                       android:hint="Enter the Address line2 "
+                       android:inputType="textCapSentences|text"
+                       android:maxLines="1"
+                       android:paddingStart="16dp"
+                       android:paddingEnd="16dp"
+                       android:textColorHint="@color/ColorHint"
+                       android:fontFamily="@font/sf_pro_display_regular"
+                       android:longClickable="false"
+                       android:singleLine="true"
+                       android:maxLength="500"
+                       android:background="@drawable/shape_et_bg"
+                       android:imeOptions="actionNext"/>
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:text="Postal Zip Code *"
+                   android:fontFamily="@font/sf_pro_display_bold"
+                   android:gravity="start"
+                   android:textSize="14sp"
+                   android:textColor="@color/colorAccent" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/shape_et_bg">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:textColorHint="@color/ColorHint"
+                       android:layout_height="50dp"
+                       app:hintEnabled="false"
+                       app:boxBackgroundMode="none"
+                       app:boxStrokeColor="@android:color/transparent">
+                       <androidx.appcompat.widget.AppCompatEditText
+                           android:id="@+id/et_postalCode"
+                           android:layout_width="match_parent"
+                           android:layout_height="50dp"
+                           android:textSize="12sp"
+                           android:textColor="@color/colorBlackLight"
+                           android:hint="Enter Postal Zip Code "
+                           android:inputType="number"
+                           android:maxLines="1"
+                           android:paddingStart="16dp"
+                           android:paddingEnd="16dp"
+                           android:textColorHint="@color/ColorHint"
+                           android:fontFamily="@font/sf_pro_display_regular"
+                           android:longClickable="false"
+                           android:singleLine="true"
+                           android:maxLength="7"
+                           android:background="@drawable/shape_et_bg"
+                           android:imeOptions="actionNext"/>
+                   </com.google.android.material.textfield.TextInputLayout>
+               </RelativeLayout>-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="Reason *"
+                android:padding="5dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="14sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColorHint="@color/ColorHint"
+                android:layout_height="50dp"
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="@android:color/transparent">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlackLight"
+                    android:hint="Enter the Reason "
+                    android:inputType="textCapSentences|text"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColorHint="@color/ColorHint"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:longClickable="false"
+                    android:singleLine="true"
+                    android:maxLength="30"
+                    android:background="@drawable/shape_et_bg"
+                    android:imeOptions="actionNext"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add next to *"
+                android:id="@+id/qc3_tv"
+                android:visibility="visible"
+                android:textColor="@color/colorAccent"
+                android:padding="5dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textSize="14sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cs_er_ll"
+                android:background="@drawable/shape_et_bg">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spAddnxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:paddingStart="15dp" />
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_AddStop"
+                style="@style/RoundCornerButtonGreen"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Add stop to this Route"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

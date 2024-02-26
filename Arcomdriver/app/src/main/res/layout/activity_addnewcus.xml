@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            app:navigationIcon="@drawable/ic_back"
+            android:id="@+id/toolbar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Create contact form"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:textColor="@color/colorWhite" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Basic Info"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/selectAll_rl"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tittle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/pr_check"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Set as primary"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/pr_check"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="16dp"
+                                android:theme="@style/check_style" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="First Name *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_firstName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter the First Name * "
+                                    android:inputType="textCapSentences|text"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="30"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginStart="5dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Last Name *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_lastName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter the Last Name * "
+                                    android:inputType="textCapSentences|text"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="30"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:text="Job Title *"
+                            android:padding="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:textSize="14sp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:textColorHint="@color/ColorHint"
+                            android:layout_height="50dp"
+                            app:hintEnabled="false"
+                            app:boxBackgroundMode="none"
+                            app:boxStrokeColor="@android:color/transparent">
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/et_jobTittle"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorBlackLight"
+                                android:hint="Enter the Job Title * "
+                                android:inputType="textCapSentences|text"
+                                android:maxLines="1"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:textColorHint="@color/ColorHint"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:longClickable="false"
+                                android:singleLine="true"
+                                android:maxLength="30"
+                                android:background="@drawable/shape_et_bg"
+                                android:imeOptions="actionNext"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Contact Details"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Primary Email *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_pEmail_et"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter Primary Email "
+                                    android:inputType="textCapSentences|text"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="30"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginStart="5dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Primary Contact *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_pContact_et"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter Primary Contact "
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="10"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginEnd="8dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Work Number *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_workNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter Work Number "
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="20"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:layout_marginStart="5dp"
+                                android:orientation="vertical">
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Home Number *"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="start"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/colorAccent" />
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/et_HomeNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:hint="Enter Home Number "
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:longClickable="false"
+                                    android:singleLine="true"
+                                    android:maxLength="20"
+                                    android:background="@drawable/shape_et_bg"
+                                    android:imeOptions="actionNext"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Address Info"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:cardBackgroundColor="@color/colorBg"
+                            app:cardCornerRadius="8dp"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="vertical">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:padding="5dp"
+                                    android:text="Delivery Address *"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:textSize="14sp" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:layout_height="50dp"
+                                    app:hintEnabled="false"
+                                    app:boxBackgroundMode="none"
+                                    app:boxStrokeColor="@android:color/transparent">
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/et_DeliveryAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/colorBlackLight"
+                                        android:hint="Enter Address "
+                                        android:inputType="textCapSentences|text"
+                                        android:maxLines="1"
+                                        android:paddingStart="16dp"
+                                        android:paddingEnd="16dp"
+                                        android:textColorHint="@color/ColorHint"
+                                        android:fontFamily="@font/sf_pro_display_regular"
+                                        android:longClickable="false"
+                                        android:singleLine="true"
+                                        android:maxLength="150"
+                                        android:background="@drawable/shape_et_bg"
+                                        android:imeOptions="actionNext"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginEnd="8dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Country *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/CspDeliveryCountry"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="State *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/CspDeliveryState"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginEnd="8dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="City *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/CspDeliveryCity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Postal Zip Code *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:layout_width="match_parent"
+                                                android:textColorHint="@color/ColorHint"
+                                                android:layout_height="50dp"
+                                                app:hintEnabled="false"
+                                                app:boxBackgroundMode="none"
+                                                app:boxStrokeColor="@android:color/transparent">
+                                                <androidx.appcompat.widget.AppCompatEditText
+                                                    android:id="@+id/et_DeliveryPincode"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="50dp"
+                                                    android:textSize="12sp"
+                                                    android:textColor="@color/colorBlackLight"
+                                                    android:hint="Enter Postal Zip Code "
+                                                    android:inputType="number"
+                                                    android:maxLines="1"
+                                                    android:paddingStart="16dp"
+                                                    android:paddingEnd="16dp"
+                                                    android:textColorHint="@color/ColorHint"
+                                                    android:fontFamily="@font/sf_pro_display_regular"
+                                                    android:longClickable="false"
+                                                    android:singleLine="true"
+                                                    android:maxLength="6"
+                                                    android:background="@drawable/shape_et_bg"
+                                                    android:imeOptions="actionNext"/>
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:theme="@style/check_style"
+                                        android:id="@+id/Same_add_chk"
+                                        android:layout_width="30dp"
+                                        android:textSize="14sp"
+                                        android:layout_height="30dp"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Same as delivery address"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/colorAccent"
+                                        android:textSize="13sp"
+                                        android:fontFamily="@font/sf_pro_display_regular"
+                                        android:layout_marginStart="5dp"/>
+
+
+                                </LinearLayout>
+
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:text="Billing Address *"
+                                    android:padding="5dp"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:textSize="14sp"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:textColorHint="@color/ColorHint"
+                                    android:layout_height="50dp"
+                                    app:hintEnabled="false"
+                                    app:boxBackgroundMode="none"
+                                    app:boxStrokeColor="@android:color/transparent">
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/et_BillAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:textSize="14sp"
+                                        android:textColor="@color/colorBlackLight"
+                                        android:hint="Enter Address "
+                                        android:inputType="textCapSentences|text"
+                                        android:maxLines="1"
+                                        android:paddingStart="16dp"
+                                        android:paddingEnd="16dp"
+                                        android:textColorHint="@color/ColorHint"
+                                        android:fontFamily="@font/sf_pro_display_regular"
+                                        android:longClickable="false"
+                                        android:singleLine="true"
+                                        android:maxLength="150"
+                                        android:background="@drawable/shape_et_bg"
+                                        android:imeOptions="actionNext"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginEnd="8dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Country *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/spBillCountry"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="State *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/spBillState"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginEnd="8dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="City *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <androidx.appcompat.widget.AppCompatSpinner
+                                                android:id="@+id/spBillCity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="46dp"
+                                                android:paddingStart="15dp" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="start"
+                                        android:layout_marginStart="5dp"
+                                        android:orientation="vertical">
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Postal Zip Code *"
+                                            android:fontFamily="@font/sf_pro_display_bold"
+                                            android:gravity="start"
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorAccent" />
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/shape_et_bg">
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:layout_width="match_parent"
+                                                android:textColorHint="@color/ColorHint"
+                                                android:layout_height="50dp"
+                                                app:hintEnabled="false"
+                                                app:boxBackgroundMode="none"
+                                                app:boxStrokeColor="@android:color/transparent">
+                                                <androidx.appcompat.widget.AppCompatEditText
+                                                    android:id="@+id/et_BillPincode"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="50dp"
+                                                    android:textSize="12sp"
+                                                    android:textColor="@color/colorBlackLight"
+                                                    android:hint="Enter Postal Zip Code "
+                                                    android:inputType="number"
+                                                    android:maxLines="1"
+                                                    android:paddingStart="16dp"
+                                                    android:paddingEnd="16dp"
+                                                    android:textColorHint="@color/ColorHint"
+                                                    android:fontFamily="@font/sf_pro_display_regular"
+                                                    android:longClickable="false"
+                                                    android:singleLine="true"
+                                                    android:maxLength="6"
+                                                    android:background="@drawable/shape_et_bg"
+                                                    android:imeOptions="actionNext"/>
+                                            </com.google.android.material.textfield.TextInputLayout>
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_ContactSave_"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Add Contact"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:textAllCaps="false"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginBottom="10dp"
+                            style="@style/RoundCornerButton"/>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Contact Info"
+                            android:textColor="@color/colorBlackLight"
+                            android:textSize="16sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/ry_contactlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/btn_show"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:scrollbars="vertical" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_no_record2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No records were found.."
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/sf_pro_display_regular"/>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/recy_v">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:id="@+id/btn_show"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/colorWhite"
+                                android:layout_centerHorizontal="true"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_ct_clear"
+                                    style="@style/RoundCornerButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:text="Cancel"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_weight="1"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="15sp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btn_ct_save"
+                                    style="@style/RoundCornerButtonGreen"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:text="Save"
+                                    android:layout_marginBottom="15dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_weight="1"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="15sp" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

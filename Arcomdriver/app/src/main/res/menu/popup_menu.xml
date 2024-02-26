@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cancel_order"
+        android:title="Cancel Order" />
+
+    <item
+        android:id="@+id/generate_orders"
+        android:title="Generate Invoice" />
+
+    <item
+        android:id="@+id/confirm_orders"
+        android:title="Confirm Order" />
+
+    <item
+        android:id="@+id/Download_invoice"
+        android:title="Download" />
+
+</menu>
+

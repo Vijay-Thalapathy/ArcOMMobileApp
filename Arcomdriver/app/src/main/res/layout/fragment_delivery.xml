@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchorGravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="vertical"
+            android:id="@+id/InPayment_ll"
+            android:visibility="gone">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_paymentsubmit"
+                            style="@style/RoundCornerButtonGreen"
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Add Payment"
+                            android:textAllCaps="false"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="15sp"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/sf_pro_display_bold" />
+-->
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/sf_pro_display_bold"
+                            android:padding="5dp"
+                            android:text="Delivery Details"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_search_bg"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvIn_discountTittle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="start"
+                                    android:text="Ordered #"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/dl_no_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="end"
+                                    android:text="N/A"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                           <!-- <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="start"
+                                    android:text="Quantity "
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/payMethod_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="end"
+                                    android:text="N/A"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvIn_TaxHeads"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="start"
+                                    android:text="Amount "
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/dl_amt_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="end"
+                                    android:text="N/A"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:text="Proof of Delivery"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_search_bg"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="start"
+                                    android:text="Delivery On"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/dl_date_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="end"
+                                    android:text="N/A"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorBlackLight"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:baselineAligned="false"
+                                android:weightSum="2">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_regular"
+                                    android:gravity="start"
+                                    android:text="Delivery Status"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="13sp"
+                                    android:textStyle="normal" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/dl_status_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sf_pro_display_bold"
+                                    android:gravity="end"
+                                    android:text="New Order"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/ColorGreen"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <GridView
+                                android:id="@+id/gv_payment"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:footerDividersEnabled="false"
+                                android:padding="1dp"
+                                android:numColumns="3">
+
+                            </GridView>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_height="200dp"
+                        android:layout_width="200dp"
+                        android:id="@+id/payment_sign_img"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center">
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/txt_noInvoice"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/error_animation" />
+
+      <!--  <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_noInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:gravity="center_vertical"
+            android:text="No records were found.."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="visible" />-->
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

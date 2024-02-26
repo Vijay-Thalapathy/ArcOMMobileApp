@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl"
+    android:background="@color/colorBg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_bottom"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/btn_show"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorWhite"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_back"
+                    style="@style/RoundCornerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="Back"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    style="@style/RoundCornerButtonGreen"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="Next"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:orientation="vertical">
+       <!--     <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:navigationIcon="@drawable/ic_back"
+                android:id="@+id/toolbar">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Route Planning (SOD)"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/colorWhite" />
+            </androidx.appcompat.widget.Toolbar>-->
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ns"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:paddingTop="8dp"
+                    android:layout_marginTop="6dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:weightSum="4"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_bluenewcircle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_invoice"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truck \nInspection"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorAccent" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:backgroundTint="@color/colorAccent"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_grey_circle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_refresh_svgrepo_com"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Planned \nRoute"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorGrayLight" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_grey_circle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_truck"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truck \nLoading"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorGrayLight" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layerType="software"
+                            android:background="@drawable/shape_dot_line" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/shape_grey_circle">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="26dp"
+                                    android:layout_height="26dp"
+                                    android:layout_centerInParent="true"
+                                    app:srcCompat="@drawable/ic_payment"
+                                    app:tint="@color/colorWhite" />
+                            </RelativeLayout>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Customer Cash"
+                                android:textAllCaps="true"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@color/colorGrayLight" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <!--       <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/progress_bar_background"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:padding="5dp"
+                            android:progress="35"
+                            android:progressDrawable="@drawable/curved_progress_bar" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11sp"
+                            android:layout_marginStart="14dp"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:text="35%"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent" />
+
+                    </RelativeLayout>-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Questionnaire *"
+                        android:padding="5dp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:paddingStart="15dp" />
+                    </RelativeLayout>
+
+         <!--           <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Driver Name*"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="50dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_customerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Driver Name "
+                            android:inputType="textCapSentences|text"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vehicle Information *"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_et_bg">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spVehicleNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:paddingStart="15dp" />
+                    </RelativeLayout>-->
+
+                    <!--   <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Draw Sigantures"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/sf_pro_display_bold" />
+
+                    <com.github.gcacace.signaturepad.views.SignaturePad
+                        android:id="@+id/signaturePad"
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/shape_et_bg"
+                        app:penColor="@android:color/black" />-->
+<!--
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Notes"
+                        android:padding="5dp"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:textColorHint="@color/ColorHint"
+                        android:layout_height="80dp"
+                        app:hintEnabled="false"
+                        app:boxBackgroundMode="none"
+                        app:boxStrokeColor="@android:color/transparent">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_notes"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/colorBlackLight"
+                            android:hint="Enter the Notes  "
+                            android:inputType="textCapSentences|text"
+                            android:maxLines="1"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:textColorHint="@color/ColorHint"
+                            android:fontFamily="@font/sf_pro_display_regular"
+                            android:longClickable="false"
+                            android:singleLine="true"
+                            android:maxLength="30"
+                            android:background="@drawable/shape_et_bg"
+                            android:imeOptions="actionNext"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rt_recycler_ques"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:visibility="visible" />
+
+                  <!--  <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginTop="11dp"
+                        android:text="Upload Proof(0)*"
+                        android:id="@+id/item_count_tv"
+                        android:fontFamily="@font/sf_pro_display_bold"
+                        android:textSize="14sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:background="@drawable/shape_et_bg"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/btn"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_add_24"
+                            app:fabCustomSize="46dp"
+                            app:fabSize="mini"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="5dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:backgroundTint="@color/colorAccent"
+                            app:tint="@color/colorWhite"
+                            app:maxImageSize="24dp" />
+
+
+                        <GridView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/gv"
+                            android:numColumns="3">
+                        </GridView>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:id="@+id/cheque_note_tv"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="Note: Upload the original copy of proof"
+                        android:gravity="center"
+                        android:textColor="@color/colorGray" />-->
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

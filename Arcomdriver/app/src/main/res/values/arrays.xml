@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="reportsprinterTypes">
+        <item>none</item>
+        <item>PrinterShare</item>
+        <item>Printek</item>
+        <item>Zebra RW420</item>
+        <item>DataMax MF4te</item>
+        <item>Brother RJ4030</item>
+        <item>Generic</item>
+        <item>Printek 541+</item>
+        </string-array>
+    <string-array name="reportsinvoiceTypes">
+        <item>Invoice</item>
+        <item>Pre-Sale</item>
+        <item>Quote</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_custom_toast"
+    android:layout_centerVertical="true"
+    app:cardCornerRadius="6dp"
+    app:cardBackgroundColor="@color/colorBg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@android:color/secondary_text_light"
+                android:layout_gravity="center_horizontal"
+                android:text="Enter Product Quantity "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:textColorHint="@color/ColorHint"
+                android:layout_height="55dp"
+                app:hintEnabled="false"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:boxBackgroundMode="none"
+                app:boxStrokeColor="@android:color/transparent">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlackLight"
+                    android:hint="Quantity"
+                    android:inputType="textCapSentences|text"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColorHint="@color/ColorHint"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:longClickable="false"
+                    android:singleLine="true"
+                    android:maxLength="2"
+                    android:digits="1234567890"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/shape_et_bg"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_quan_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_edit_quan_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:textAllCaps="true"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="32dp"
+                style="@style/RoundCornerButton"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.cardview.widget.CardView>
